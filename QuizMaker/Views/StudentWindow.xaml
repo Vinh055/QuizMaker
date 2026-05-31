@@ -17,10 +17,9 @@
             <TextBlock x:Name="LblStudentWelcome" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
             <TextBlock Text="Danh sách bài kiểm tra:" Margin="0,0,0,5" Grid.Row="1" VerticalAlignment="Top"/>
 
-            <DataGrid x:Name="DgStudentQuizzes" Grid.Row="1" Margin="0,30,0,10" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid x:Name="DgStudentQuizzes" Grid.Row="1" Margin="0,30,0,10" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="DgStudentQuizzes_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Tên bài" Binding="{Binding Title}" Width="2*"/>
-                    <DataGridTextColumn Header="Giới hạn giờ?" Binding="{Binding HasTimeLimit}" Width="1*"/>
                     <DataGridTextColumn Header="Mở lúc" Binding="{Binding OpenTime, StringFormat=dd/MM/yyyy HH:mm}" Width="1.5*"/>
                     <DataGridTextColumn Header="Đóng lúc" Binding="{Binding CloseTime, StringFormat=dd/MM/yyyy HH:mm}" Width="1.5*"/>
                     <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="1.5*"/>
